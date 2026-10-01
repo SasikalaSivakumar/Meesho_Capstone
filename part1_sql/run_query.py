@@ -5,7 +5,7 @@ import os
 # Find the project folders
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DB_PATH = os.path.join(BASE_DIR, "Data", "meesho_reseller.db")
+DB_PATH = os.path.join(BASE_DIR, "data", "meesho_reseller.db")
 OUTPUT_DIR = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
     "output"

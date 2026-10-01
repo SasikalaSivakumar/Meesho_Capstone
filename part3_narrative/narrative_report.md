@@ -11,7 +11,7 @@ This measures Ethnic Wear revenue growth from April to May 2026, comparing April
 Ethnic Wear revenue increased by **77.1%** from April to May 2026. This result is classified as **flagged** by the Part 2 growth-detection engine.
 
 **Implication — Hypothesis:**  
-As a next step, the regional manager should check which regions and reseller aliases contributed to the increase and verify whether inventory and order fulfillment can support the higher demand. The reason for the increase is a hypothesis and is not proven by the supplied data.
+As a next step, the regional manager should check which regions and reseller aliases contributed to the increase and review inventory and order fulfillment capacity alongside the revenue increase. The reason for the increase is a hypothesis and is not proven by the supplied data.
 
 ### Self-Score — May Narrative
 

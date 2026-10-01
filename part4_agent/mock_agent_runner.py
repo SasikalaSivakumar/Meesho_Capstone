@@ -55,13 +55,15 @@ def fill_prompt(
     Uses the required Context -> Insight -> Implication structure.
     """
     return (
-        f"Context: {category} revenue changed from {prev_month} to {month}. "
-        f"Insight — Fact: {category} recorded a month-on-month change of "
-        f"{mom_pct}%. "
-        f"Implication — Hypothesis: Review the category's recent performance "
-        f"and investigate the factors behind this flagged movement before "
-        f"deciding on follow-up action."
-    )
+    f"Context: {category} revenue changed from {prev_month} to {month}. "
+    f"Previous revenue: {previous_revenue}. "
+    f"Current revenue: {current_revenue}. "
+    f"Insight — Fact: {category} recorded a month-on-month change of "
+    f"{mom_pct}%. "
+    f"Implication — Hypothesis: Review the category's recent performance "
+    f"and investigate the factors behind this flagged movement before "
+    f"deciding on follow-up action."
+)
 
 
 def run(
@@ -173,3 +175,9 @@ def run(
 
     print(json.dumps(result, indent=2))
     return result
+
+run(
+    "May",
+    "part2_engine/fixtures/monthly_category_revenue.csv",
+    "part2_engine/fixtures/monthly_category_revenue.csv",
+)

@@ -14,6 +14,7 @@ The prompt requires these placeholder variables:
 - `{mom_pct}` — month-over-month growth percentage
 - `{month}` — current month
 - `{prev_month}` — previous month
+- `{reseller_alias}` — coded reseller alias, if a reseller is referenced
 
 ## Prompt
 
@@ -34,6 +35,7 @@ Rules:
 4. If a possible cause is suggested, label it explicitly as a hypothesis because the supplied data does not prove causation.
 5. Never state a number that is not one of the supplied placeholder values.
 6. Do not invent additional metrics, causes, reseller names, or business facts.
+7. 7. If a reseller is referenced, use only the supplied `{reseller_alias}` and never output a raw reseller name.
 
 ## Checklist
 

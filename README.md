@@ -54,3 +54,14 @@ Meesho_Capstone/
 │   └── mock_agent_runner.py
 │
 └── README.md
+
+
+
+## How to Run the Project
+
+Run the commands below from the project root.
+
+### Step 1 — Regenerate the dataset
+
+```powershell
+py .\data\generate_dataset.py
