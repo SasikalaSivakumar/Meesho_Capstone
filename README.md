@@ -6,10 +6,10 @@ This project implements a four-part offline intelligence workflow for monitoring
 
 The pipeline follows this order:
 
-1. Part 1 — Compute reliable revenue metrics using SQL.
-2. Part 2 — Validate the feed and calculate month-on-month growth and alert status.
-3. Part 3 — Convert validated results into a masked stakeholder narrative.
-4. Part 4 — Run a monitoring-agent workflow that validates inputs, computes growth, drafts messages, suppresses excess alerts, and holds all drafts for human approval.
+1. **Part 1** — Compute reliable revenue metrics using SQL.
+2. **Part 2** — Validate the feed and calculate month-on-month growth and alert status.
+3. **Part 3** — Convert validated results into a masked stakeholder narrative.
+4. **Part 4** — Run a monitoring-agent workflow that validates inputs, computes growth, drafts messages, suppresses excess alerts, and holds all drafts for human approval.
 
 The complete pipeline runs locally with **zero API keys, zero external network calls, and no email service**.
 
@@ -54,14 +54,3 @@ Meesho_Capstone/
 │   └── mock_agent_runner.py
 │
 └── README.md
-
-
-
-## How to Run the Project
-
-Run the commands below from the project root.
-
-### Step 1 — Regenerate the dataset
-
-```powershell
-py .\data\generate_dataset.py
