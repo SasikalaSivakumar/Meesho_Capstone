@@ -176,8 +176,17 @@ def run(
     print(json.dumps(result, indent=2))
     return result
 
-run(
-    "May",
-    "part2_engine/fixtures/monthly_category_revenue.csv",
-    "part2_engine/fixtures/monthly_category_revenue.csv",
-)
+
+if __name__ == "__main__":
+    fixtures_dir = BASE_DIR.parent / "part2_engine" / "fixtures"
+    valid_csv = str(fixtures_dir / "monthly_category_revenue.csv")
+    corrupted_csv = str(fixtures_dir / "corrupted_feed.csv")
+
+    print("=== SCENARIO 1: May (April -> May) ===")
+    run("May", valid_csv, valid_csv)
+
+    print("\n=== SCENARIO 2: June (May -> June) ===")
+    run("June", valid_csv, valid_csv)
+
+    print("\n=== SCENARIO 3: Corrupted Feed Hard Stop ===")
+    run("July", valid_csv, corrupted_csv)

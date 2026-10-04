@@ -47,6 +47,11 @@ LEFT JOIN orders o
 WHERE o.order_id IS NULL;
 
 -- Query 4B: COUNT(*) vs COUNT(order_id)
+-- EXPLANATION: When performing a LEFT JOIN for reseller RS024 (who has zero orders),
+-- SQLite produces a single result row containing RS024 attributes and NULL for all order columns.
+-- COUNT(*) counts the total number of rows in the group, returning 1 (counting the single NULL-padded row).
+-- COUNT(o.order_id) counts non-NULL values in the order_id column, returning 0.
+-- This explicitly demonstrates why COUNT(*) CANNOT be used to test for a zero-match LEFT JOIN row.
 
 SELECT
     r.reseller_id,
